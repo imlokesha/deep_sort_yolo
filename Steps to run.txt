@@ -1,0 +1,25 @@
+Steps to run
+
+1. conda create -p ./env python=3.7 -y
+2. conda activate ./env/
+3. pip install -r requirements.txt
+4. To install specific PyTorch compability version for CPU and GPU
+https://pytorch.org/get-started/previous-versions/
+For Conda env -: 
+conda install pytorch==1.4.0 torchvision==0.5.0 cpuonly -c pytorch -y
+For venv -:
+pip install torch==1.4.0+cpu torchvision==0.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+For CPU users -:
+5. python detectorTracker.py
+
+For GPU users -:
+5. In \deep_sort_yolo\detector\YOLOv3\detector.py , change in line 12 use_cuda=True
+6. python detectorTracker.py
+
+
+Your web cam will start!!
+
+ 
+ 
+pip install torch==1.4.0+cu92 torchvision==0.5.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
